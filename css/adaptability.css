@@ -186,9 +186,7 @@
 	}
 
 	.toggle-burger-menu.open-menu {
-		position: absolute;
-		display: block;
-		width: 80%;
+		position: relative;
 		overflow: auto;
 		padding: 7px;
 		border-top: 1px solid;
@@ -199,7 +197,6 @@
 		-webkit-transition: all 0.4s ease;
 		-o-transition: all 0.4s ease;
 		transition: all 0.4s ease;
-		z-index: 1;
 	}
 
 	.toggle-burger-menu.open-menu nav {
@@ -231,8 +228,6 @@
 	}
 
 	.main.open-menu {
-		position: relative;
-		z-index: 0;
 		opacity: .2;
 	}
 
@@ -271,6 +266,10 @@
 }
 
 @media screen and (max-width: 630px) {
+	.main {
+		max-width: 90%;
+	}
+
 	.slider {
 		width: 95%;
 	}
@@ -301,7 +300,6 @@
 		width: 30px;
     	height: 30px;
 	    font-size: 25px;
-
 	}
 
 	.slide-nav-btn {
@@ -336,6 +334,11 @@
 
 	.category span a {
 		font-size: 18px;
+	}
+
+	.product-item {
+		flex-grow: 1;
+		margin: 5px;
 	}
 
 	.in-basket svg {
