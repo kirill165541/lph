@@ -1,4 +1,4 @@
-@media screen and (max-width: 980px) {
+@media (max-width: 980px) {
 
 	.header-bar .fixed-container {
 		max-width: 97%;
@@ -110,7 +110,7 @@
 	}
 }
 
-@media screen and (max-width: 785px) {
+@media (max-width: 785px) {
 	h1 {
 		font-size: 55px;
 	}
@@ -265,7 +265,7 @@
 
 }
 
-@media screen and (max-width: 630px) {
+@media (max-width: 630px) {
 	.main {
 		max-width: 90%;
 	}
@@ -279,7 +279,7 @@
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 	h1 {
 		font-size: 45px;
 	}
@@ -379,7 +379,7 @@
 	}
 }
 
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
 	h1 {
 		font-size: 35px;
 	}
