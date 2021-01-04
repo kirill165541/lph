@@ -393,6 +393,7 @@ h2 {
 	margin-bottom: 30px;
 	border: 1px solid rgba(9,66,39,0.15);
 	border-radius: 25px;
+	background: -o-radial-gradient(at top, #fcfcfc, #fffa70);
 	background: radial-gradient(at top, #fcfcfc, #fffa70);
 }
 
