@@ -292,9 +292,9 @@
 		font-size: 14px;
 	}
 
-	.item {
+	/*.item {
 		height: calc(100vh / 4);
-	}
+	}*/
 
 	#prev-slide, #next-slide {
 		width: 30px;
@@ -358,9 +358,7 @@
 	}
 
 	.main-aside {
-		display: block;
 		max-width: 100%;
-		height:100px;
 	}
 
 	.contact {
