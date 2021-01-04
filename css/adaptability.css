@@ -281,6 +281,7 @@
 
 @media (max-width: 480px) {
 	h1 {
+		padding: initial;
 		font-size: 45px;
 	}
 
@@ -291,10 +292,6 @@
 	.header-title, .footer-nav li a, .contact a {
 		font-size: 14px;
 	}
-
-	/*.item {
-		height: calc(100vh / 4);
-	}*/
 
 	#prev-slide, #next-slide {
 		width: 30px;
