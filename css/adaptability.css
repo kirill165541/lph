@@ -267,7 +267,25 @@
 
 @media (max-width: 630px) {
 	.popup-conteiner, .prod-to-basket {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-moz-box-orient: vertical;
+		-moz-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+	}
+
+	.basket-left, .wrap-form-img {
+		width: 100%;
+	}
+
+	.wrap-form-img {
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
 	}
 
 	.main {
@@ -310,10 +328,6 @@
 
 	.prod-to-basket {
 		margin: 15px 0;
-	}
-
-	.prod-to-basket form {
-		display: block;
 	}
 
 	.column-right {
