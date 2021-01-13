@@ -6,6 +6,8 @@
 	<meta lang="ru">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../../css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/cart.css">
+	<link href="../../../css/jquery.nice-number.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../../../css/adaptability.css">
 </head>
 <body>
@@ -29,9 +31,12 @@
 						<a href="../../../route/about/index.html">О нас</a>	
 					</nav>
 				</div>
-				<div class="wrap-img">
-					<img src="../../../icons/food-basket.png">
-				</div>
+				<a href="#blackout" id="popup-basket">
+					<div class="wrap-img">
+						<span class="count-prod"></span>
+						<img src="../../../icons/food-basket.png">
+					</div>
+				</a>
 			</div>
 		</div>
 	</header>
@@ -50,6 +55,28 @@
 			</nav>
 		</div>
 		<main class="main">
+			<div id="blackout">
+				<div id="popup">
+					<h1>Корзина</h1>
+					<p>Ваша корзина пуста</p>
+					<a href="#" class="close"><img src="../../../icons/close.png" alt="закрыть"></a>
+					<div class="popup-conteiner">
+						<div class="basket-left">
+							<label class="total">Итог:</label>
+							<input type="text" class="total-price" name="total-price" readonly>
+						</div>
+						<div class="basket-rigth">
+							<form action="#" class="appSite checkout">
+								<input class="checkout-field" type="text" name="name" placeholder="Фамилия Имя" required>
+								<input class="checkout-field" type="tel" name="tel" placeholder="Телефон">
+								<input class="checkout-field" type="email" name="email" placeholder="email" required>
+								<textarea class="checkout-field" name="descriptionProd" rows="5" placeholder="Комментарий к заказу" ></textarea>
+								<button class="checkout-field" type="submit" name="sendForm" value="sendForm">Оформить заказ</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="column-left">
 				<ul class="column-left-navigation">
 					<li><a href="../../../index.html">Витрина</a></li>
@@ -70,9 +97,12 @@
 						<a class="product-item-desc" href="#">
 							<img src="#" alt="Курица">
 							<h2>Куриная тушка</h2>
-							<span class="price">300&nbsp;&#8381;</span>
+							<form action="#" class="appSite">
+								<label class="price">300&nbsp;&#8381;</label>
+								<input class="product-quantity" type="number" name="quantity" value="10" min="10" step="0.5">
+							</form>
 						</a>
-						<a href="#" class="in-basket">В корзину
+						<a href="#" class="in-basket" id="go">В корзину
 							<svg>
 								<rect></rect>
 							</svg>
@@ -82,7 +112,10 @@
 						<a class="product-item-desc" href="#">
 							<img src="#" alt="Индейка">
 							<h2>Тушка индейки</h2>
-							<span class="price">500&nbsp;&#8381;</span>
+							<form action="#" class="appSite">
+								<label class="price">500&nbsp;&#8381;</label>
+								<input class="product-quantity" type="number" name="quantity" value="10" min="10" step="0.5">
+							</form>
 						</a>
 						<a href="#" class="in-basket">В корзину
 							<svg>
@@ -94,7 +127,10 @@
 						<a class="product-item-desc" href="#">
 							<img src="#" alt="Перепелка">
 							<h2>Перепелка</h2>
-							<span class="price">500&nbsp;&#8381;</span>
+							<form action="#" class="appSite">
+								<label class="price">400&nbsp;&#8381;</label>
+								<input class="product-quantity" type="number" name="quantity" value="10" min="10" step="0.5">
+							</form>
 						</a>
 						<a href="#" class="in-basket">В корзину
 							<svg>
@@ -130,6 +166,8 @@
 		</div>
 	</footer>
 <script type="text/javascript" src="../../../js/jquery-3.5.1.min.js"></script>
+<script src="../../../js/jquery.nice-number.js"></script>
 <script type="text/javascript" src="../../../js/burger-menu.js"></script>
+<script type="text/javascript" src="../../../js/basket.js"></script>
 </body>
 </html>

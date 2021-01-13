@@ -5,4 +5,12 @@ $(document).ready(function() {
 		$('.main').toggleClass('open-menu');
 		$('body').toggleClass('fixed-page');
 	});
+
+	$('#popup-basket').click(function() {
+		$('body').toggleClass('fixed-page');
+	});
+
+	$('.close').click(function() {
+		$('body').toggleClass('fixed-page');
+	});
 });

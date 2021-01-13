@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../../css/adaptability.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/cart.css">
 </head>
 <body>
 	<header class="header">
@@ -29,9 +30,11 @@
 						<a href="../about/index.html">О нас</a>	
 					</nav>
 				</div>
-				<div class="wrap-img">
-					<img src="../../icons/food-basket.png">
-				</div>
+				<a href="#blackout" id="popup-basket">
+					<div class="wrap-img">
+						<img src="../../icons/food-basket.png">
+					</div>
+				</a>
 			</div>
 		</div>
 	</header>
@@ -50,6 +53,12 @@
 			</nav>
 		</div>
 		<main class="main">
+			<div id="blackout">
+				<div id="popup">
+					Modalochka
+					<a href="#" class="close"><img src="../../icons/close.png" alt="закрыть"></a>
+				</div>
+			</div>
 			<div class="column-left">
 				<ul class="column-left-navigation">
 					<li><a href="../../index.html">Витрина</a></li>

@@ -2,7 +2,7 @@ var slideNow = 1;
 var slideCount = $('.items').children().length;
 var translateWidth = 0;
 var navBtnId = 0;
-var slideInterval = 3000;
+var slideInterval = 5000;
 
 function nextSlide() {
 	if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
@@ -40,7 +40,6 @@ function prevSlide() {
 $(document).ready(function() {
 
 	var switchInterval = setInterval(nextSlide, slideInterval);
-
     $('.scroller').hover(function() {
         clearInterval(switchInterval);
     }, function() {
@@ -51,13 +50,11 @@ $(document).ready(function() {
 	$('#next-slide').click(function() {
 
 		nextSlide();
-
 	});
 
 	$('#prev-slide').click(function() {
 
 		prevSlide();
-
 	});
 
 	$('.slide-nav-btn').click(function(){

@@ -6,6 +6,7 @@
 	<meta lang="ru">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
 	<link rel="stylesheet" type="text/css" href="css/adaptability.css">
 </head>
 <body>
@@ -29,9 +30,11 @@
 						<a href="route/about/index.html">О нас</a>					
 					</nav>
 				</div>
-				<div class="wrap-img">
-					<img src="icons/food-basket.png">
-				</div>
+				<a href="#blackout" id="popup-basket">
+					<div class="wrap-img">
+						<img src="icons/food-basket.png">
+					</div>
+				</a>
 			</div>
 		</div>
 	</header>
@@ -49,25 +52,32 @@
 				<a href="route/about/index.html">О нас</a>					
 			</nav>
 		</div>
-			<div class="slider">
-					<div class="scroller">
-						<ul class = "items" id="items-sliders">
-							<li class="item" style="background-image: url(image/slide1.jpg);"></li>
-							<li class="item" style="background-image: url(image/slide2.jpg);"></li>
-							<li class="item" style="background-image: url(image/slide3.jpg);"></li>
-						</ul>
-						<div id="prev-next-slide">
-							<div id="prev-slide">&#8249;</div>
-							<div id="next-slide">&#8250;</div>
-						</div>
-						<ul id="nav-btns">
-							<li class="slide-nav-btn"></li>
-							<li class="slide-nav-btn"></li>
-							<li class="slide-nav-btn"></li>
-						</ul>
+		<div class="slider">
+				<div class="scroller">
+					<ul class = "items" id="items-sliders">
+						<li class="item" style="background-image: url(image/slide1.jpg);"></li>
+						<li class="item" style="background-image: url(image/slide2.jpg);"></li>
+						<li class="item" style="background-image: url(image/slide3.jpg);"></li>
+					</ul>
+					<div id="prev-next-slide">
+						<div id="prev-slide">&#8249;</div>
+						<div id="next-slide">&#8250;</div>
 					</div>
-			</div>
+					<ul id="nav-btns">
+						<li class="slide-nav-btn"></li>
+						<li class="slide-nav-btn"></li>
+						<li class="slide-nav-btn"></li>
+					</ul>
+				</div>
+		</div>
 		<main class="main">
+			<div id="blackout">
+				<div id="popup">
+					<h1>Корзина</h1>
+					<p>Ваша корзина пуста</p>
+					<a href="#" class="close"><img src="icons/close.png" alt="закрыть"></a>
+				</div>
+			</div>
 			<div class="column-left">
 				<ul class="column-left-navigation">
 					<li><a href="index.html">Витрина</a></li>
