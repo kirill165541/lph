@@ -2,22 +2,44 @@ $(function(){
 	$('input[type="number"]').niceNumber();
 	$('.in-basket').click(function(){
 		var productTOBasket = $('<div class="prod-to-basket"></div>');
-		var wrapFormImg = $('<div class="wrap-form-img"></div>');
+		// var wrapFormImg = $('<div class="wrap-form-img"></div>');
+		var formProduct = $('<form action="#" class="appSite"></form>');
+		var nameProduct = $('<label class="name-product-cart" name="nameProduct"></label>');
+		var quantityProduct = $('<input class="quantity" type="number" name="quantityProduct" value="">');
+		var priceProduct = $('<input class="price" type="text" name="priceProduct" value="" readonly>');
+		var sumPriceProduct = $('<input class="summa" type="text" name="sumPriceProduct" value="" readonly>');
 		var removeProd = $('<img id="remove" src="../../../icons/remove.png" alt="удалить">');
 		var siblEl = $(this).siblings();
 		removeProd.css({
+			'position':'absolute',
+			'top':'0',
+			'right':'0',
 			'cursor':'pointer',
 		});
 		$('.basket-left').prepend(productTOBasket);
-		productTOBasket.prepend(siblEl.children('img, h2').clone());
-		productTOBasket.append(wrapFormImg);
-		wrapFormImg.append(siblEl.children('form').clone());
-		wrapFormImg.append(removeProd);
+		productTOBasket.prepend(formProduct);
+		productTOBasket.append(removeProd);
+		formProduct.append(nameProduct);
+		formProduct.append(quantityProduct);
+		formProduct.append(priceProduct);
+		formProduct.append(siblEl.find('span').clone());
+		formProduct.append(sumPriceProduct);
+		nameProduct.html(siblEl.children('h2').html());
+		priceProduct.val(siblEl.find('label').html());
+		quantityProduct.val(siblEl.find('input').val());
+		sumPriceProduct.val(quantityProduct.val()*priceProduct.val());
+		$('.quantity').change( function () {
+			sumPriceProduct.val(quantityProduct.val()*priceProduct.val());
+		});
+		
+		// productTOBasket.prepend(siblEl.children('h2').clone());
+		// productTOBasket.append(wrapFormImg);
+		// wrapFormImg.append(siblEl.children('form').clone());
 		checkLengthClass ();
 		countProdCart ();
 	});
 	$('body').on('click','#remove', function(){
-		$(this).parent().parent().remove();
+		$(this).parent().remove();
 		checkLengthClass ();
 		countProdCart ();
 	});

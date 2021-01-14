@@ -113,56 +113,59 @@
 }
 
 .prod-to-basket {
+	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;	
 	margin: 20px 30px;
 	padding: 3px 10px;
 	border-bottom: 1px solid black;
 }
 
-.wrap-form-img {
+/*.wrap-form-img {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-}
+}*/
 
-.prod-to-basket h2, .wrap-form-img form {
-	margin: 0 10px;
+.prod-to-basket form {
+	display: flex;
 	font-size: 14px;
 }
 
-/*.prod-to-basket img {
-	width: 100px;
-}*/
-
-.wrap-form-img form {
+/*.wrap-form-img form {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-}
+}*/
 
-.prod-to-basket h2 {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}
 
 .prod-to-basket label {
+	display: flex;
+	width: 150px;
+}
+
+.prod-to-basket input {
+	width: 50px;
+	outline: none;
+	border: none;
+	border-left: 1px solid black;
+}
+
+.prod-to-basket input::-webkit-outer-spin-button,
+.prod-to-basket input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: textfield;
+    margin: 0;
+}
+
+.prod-to-basket span {
 	margin-right: 20px;
 }
 
