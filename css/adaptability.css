@@ -185,6 +185,10 @@
 		display: none;
 	}
 
+	.basket-left {
+		width: 100%;
+	}
+
 	.toggle-burger-menu.open-menu {
 		position: relative;
 		width: 80%;
@@ -280,18 +284,6 @@
 		flex-direction: column;
 	}
 
-	.basket-left {
-		width: 100%;
-	}
-
-	/*.wrap-form-img {
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-between;
-	}*/
-
 	.main {
 		max-width: 90%;
 	}
@@ -343,6 +335,15 @@
 
 	.prod-to-basket span {
 		margin-right: 10px;
+	}
+
+	.basket-rigth {
+		margin: initial;
+	}
+
+	.appSite.checkout {
+		max-width: initial;
+		border: initial;
 	}
 
 	#prev-slide, #next-slide {
