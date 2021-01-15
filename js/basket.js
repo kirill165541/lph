@@ -2,7 +2,6 @@ $(function(){
 	$('input[type="number"]').niceNumber();
 	$('.in-basket').click(function(){
 		var productTOBasket = $('<div class="prod-to-basket"></div>');
-		// var wrapFormImg = $('<div class="wrap-form-img"></div>');
 		var formProduct = $('<form action="#" class="appSite"></form>');
 		var nameProduct = $('<label class="name-product-cart" name="nameProduct"></label>');
 		var quantityProduct = $('<input class="quantity" type="number" name="quantityProduct" value="">');
@@ -29,23 +28,38 @@ $(function(){
 		quantityProduct.val(siblEl.find('input').val());
 		sumPriceProduct.val(quantityProduct.val()*priceProduct.val());
 		$('.quantity').change( function () {
-			sumPriceProduct.val(quantityProduct.val()*priceProduct.val());
+			sumPriceProduct.val(parseInt(quantityProduct.val())*parseInt(priceProduct.val()));
+			totalSumma ();
 		});
-		
-		// productTOBasket.prepend(siblEl.children('h2').clone());
-		// productTOBasket.append(wrapFormImg);
-		// wrapFormImg.append(siblEl.children('form').clone());
 		checkLengthClass ();
 		countProdCart ();
+		totalSumma ();
 	});
 	$('body').on('click','#remove', function(){
 		$(this).parent().remove();
 		checkLengthClass ();
 		countProdCart ();
+		totalSumma ();
 	});
+	function totalSumma () {
+		var sum = $('.summa').map(function(){
+			return parseInt($(this).val());
+		}).get();
+		var totalSum = sum.reduce(function(accumulator, currentValue){
+			return accumulator + currentValue;
+		});
+		$('.total-price').val(totalSum);
+	}
+
 	function checkLengthClass () {
 		var $productCount = $('.prod-to-basket').length;
 		if ($productCount != 0) {
+			// var totalSum = parseInt(0);
+			// $('.summa').each(function(){
+			// 	totalSum += parseInt($('.summa').val());
+			// 	return totalSum;
+			// });
+			// $('.total-price').val(parseInt(totalSum));
 			$('#popup p').hide();
 			$('.basket-rigth').show();
 			$('.basket-left').show();
